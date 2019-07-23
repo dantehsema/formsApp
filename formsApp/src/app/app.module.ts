@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -15,8 +16,9 @@ import { TestComponent } from './test/test.component';
     ContactFormComponent,
     TestComponent
   ],
-  imports: [
-    BrowserModule
+  imports: [ 
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
