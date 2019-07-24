@@ -7,6 +7,7 @@ import { HolloWorldComponent } from './hollo-world/hollo-world.component';
 import { DateComponent } from './date/date.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { TestComponent } from './test/test.component';
+import { QAFormComponent } from './qa-form/qa-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TestComponent } from './test/test.component';
     HolloWorldComponent,
     DateComponent,
     ContactFormComponent,
-    TestComponent
+    TestComponent,
+    QAFormComponent
   ],
   imports: [ 
     BrowserModule,
