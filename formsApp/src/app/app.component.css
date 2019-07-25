@@ -1,3 +1,16 @@
-h1 {
-   color: green;
+nav {
+   background-color: black;
+   text-align: center; 
+  
+}
+
+img {
+    align-items: left;
+}
+
+a {
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    font-size: xx-large;
 }

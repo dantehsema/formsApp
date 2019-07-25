@@ -1,0 +1,239 @@
+<br><br><br>
+
+<h5>When you fill this form, you certity that you have followed the imaging 
+    policy/guidlines of the BCIT Service Desk and have completed all steps 
+    in the policy that are not limited to:
+</h5>
+
+<br>
+<form class="fixed-middle">
+    <div class="form-group">
+        <label for="pcName">
+            You have followed PC naming convention 
+            <br>
+        </label>
+        <input 
+            required 
+            minlength="3" 
+            maxlength="15" 
+            ngModel 
+            name="pcName" 
+            #pcName="ngModel" 
+            (change)="log(pcName)" 
+            placeholder="Enter PC Name..." 
+            id="pcName" 
+            type="text" 
+            class="form-control">
+        <div 
+            class="alert alert-danger" 
+            *ngIf="pcName.touched && !pcName.valid">
+            <div 
+            *ngIf="pcName.errors.required">
+            First name is required.
+        </div>
+            <div 
+            *ngIf="pcName.errors.minlength">
+            PC name should be minimum {{ pcName.errors.minlength.requiredLength }} characters.
+        </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label 
+            for="updates">
+            You have ran all pc updates 
+            <br>
+        </label>
+        <label>
+            <input 
+            type="radio" 
+            name="optradio" 
+            checked>
+            Yes
+        </label>
+        <label>
+            <input 
+            type="radio" 
+            name="optradio" 
+            checked>
+            No
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label 
+            for="applications">
+            You have checked and made sure all applications <br>
+             are installed properly and working
+        </label>
+        <label>
+            <input 
+            type="radio" 
+            name="optradio" 
+            checked>
+            Yes
+        </label>
+        <label>
+            <input 
+            type="radio" 
+            name="optradio" 
+            checked>
+            No
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label 
+            for="updates">
+            You have added enterprise workstation admin to admin group 
+        </label>
+        <label>
+            <input 
+            type="radio" 
+            name="optradio" 
+            checked>
+            Yes
+        </label>
+        <label>
+            <input 
+            type="radio" 
+            name="optradio" 
+            checked>
+            No
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for="serviceTag">
+            You have recorded service tag info 
+            <br>
+        </label>
+        <input 
+            required 
+            minlength="3" 
+            maxlength="15" 
+            ngModel 
+            name="serviceTag" 
+            #serviceTag="ngModel" 
+            placeholder="Enter service tag..." 
+            id="serviceTag" 
+            type="text" 
+            class="form-control">
+        <div 
+            class="alert alert-danger" 
+            *ngIf="serviceTag.touched && !serviceTag.valid">
+            <div 
+            *ngIf="serviceTag.errors.required">
+            Service tag is required.
+        </div>
+            <div 
+            *ngIf="serviceTag.errors.minlength">
+            Service Tag info should be minimum {{ serviceTag.errors.minlength.requiredLength }} characters.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="pcTag">
+            You have recorded pc tag 
+            <br>
+        </label>
+        <input 
+            required 
+            minlength="3" 
+            maxlength="15" 
+            ngModel 
+            name="pcTag" 
+            #pcTag="ngModel" 
+            placeholder="Enter PC Tag #..." 
+            id="pcTag" 
+            type="text" 
+            class="form-control">
+        <div 
+            class="alert alert-danger" 
+            *ngIf="pcTag.touched && !pcTag.valid">
+            <div 
+            *ngIf="pcTag.errors.required">
+            First name is required.
+        </div>
+            <div 
+            *ngIf="pcTag.errors.minlength">
+            PC Tag information should be minimum {{ pcTag.errors.minlength.requiredLength }} characters.
+            </div>
+        </div>
+    </div>    
+    <div class="form-group">
+        <label for="firstName">
+            First Name: 
+            <br>
+        </label>
+        <input 
+            required 
+            minlength="3" 
+            maxlength="15" 
+            ngModel 
+            name="firstName" 
+            #firstName="ngModel" 
+            (change)="log(firstName)" 
+            placeholder="first name..." 
+            id="firstName" 
+            type="text" 
+            class="form-control">
+        <div 
+            class="alert alert-danger" 
+            *ngIf="firstName.touched && !firstName.valid">
+            <div 
+            *ngIf="firstName.errors.required">
+            First name is required.
+        </div>
+            <div 
+            *ngIf="firstName.errors.minlength">
+            First name should be minimum {{ firstName.errors.minlength.requiredLength }} characters.
+        </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label 
+            for="lastname">
+            lastName: 
+            <br>
+        </label>
+        <input 
+            required 
+            minlength="3" 
+            maxlength="15" 
+            ngModel 
+            name="lastName" 
+            #lastName="ngModel" 
+            placeholder="last name..." 
+            id="lastname" 
+            type="text" 
+            class="form-control">
+        <div 
+            class="alert alert-danger" 
+            *ngIf="lastName.touched && !lastName.valid">
+            <div 
+                *ngIf="lastName.errors.required">
+                Last name is required.
+            </div>
+            <div 
+                *ngIf="lastName.errors.minlength">
+                Last name should be minimum {{ lastName.errors.minlength.requiredLength }} characters.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="date">
+            Date PC imaged: 
+            <br>
+        </label>
+        <input type="date">
+    </div>
+
+    <div>
+            <button (click)="submit()">Submit</button>
+    </div>
+
+</form>
