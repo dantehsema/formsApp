@@ -6,7 +6,7 @@
 </h5>
 
 <br>
-<form class="fixed-middle">
+<form #qaForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="form-group">
         <label for="pcName">
             You have followed PC naming convention 
